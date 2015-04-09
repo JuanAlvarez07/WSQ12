@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int gcd(int x, int y){
+  if (x==0){
+  return y;
+  }
+
+  if(y==0){
+  return x;
+  }
+
+  if (x == y){
+  return y;
+  }
+  else{
+    return gcd(y,x%y);
+  }
+}
+int main(){
+  int first, second;
+  cout<<"Enter the first number: "<<endl;
+  cin>>first;
+  cout<<"Enter the second number: "<<endl;
+  cin>>second;
+
+  int y= gcd(first,second);
+
+  cout<<"The greatest common denominador of the two number is: "<<y<<endl;
+  return 0;
+}
